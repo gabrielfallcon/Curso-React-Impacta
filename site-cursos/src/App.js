@@ -6,10 +6,9 @@ import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import '../node_modules/jquery/dist/jquery.min';
 import '../node_modules/popper.js/dist/umd/popper.min';
 
+import Menu from './components/menu/index'
+import Routes from './routes'
 
-import Curso from './pages/cursos'
-import Contato from './pages/contato'
-import Menu from './components/menu'
 
 
 
@@ -19,11 +18,8 @@ function App() {
       <header className="App-header">
 
         <Menu></Menu>
-
-        <Curso></Curso>
-
-        <Contato></Contato>
-
+        <Routes></Routes>
+        
       </header>
     </div>
   );

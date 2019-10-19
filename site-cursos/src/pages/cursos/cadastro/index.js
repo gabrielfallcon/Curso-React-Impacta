@@ -16,6 +16,21 @@ export default class Cadastro extends React.Component {
         preco: 0.0,
         categoria: 'REDES' 
     }
+    alteraCodigo = function(codigo){
+        this.setState({codigo})
+    }
+    alteraDescricao = function(descricao){
+        this.setState({descricao})
+    }
+    alteraCargaHoraria = function(cargaHoraria){
+        this.setState({cargaHoraria})
+    }
+    alteraPreco = function(preco){
+        this.setState({preco})
+    }
+    alteraCategoria = function(categoria){
+        this.setState({categoria})
+    }
 
     componentWillMount(){
         this.listar()
@@ -33,7 +48,12 @@ export default class Cadastro extends React.Component {
         return (
             <div className="row border-bottom">
                 <div className="col-md-6">
-                    <CursoForm />
+                    <CursoForm  alteraCampo={this.state.alteraCampo.bind()} 
+                    codigo={this.state.codigo}
+                    descricao={this.state.descricao}
+                    cargaHoraria={this.state.cargaHoraria}/>
+                    preco={this.state.preco}/>
+                    categoria={this.state.categoria}/>
                 </div>
                 <div className="col-md-6">
                     <CursoList batatas={this.state.data} />

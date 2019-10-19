@@ -3,13 +3,7 @@ import React from 'react'
 export default class Formulario extends React.Component {
 
 
-    initialState = {
-    }
-
-    constructor(props){
-        super(props)
-        this.state = this.initialState
-    }
+    
 
    
 
@@ -23,7 +17,7 @@ export default class Formulario extends React.Component {
                             Código:
                         </label>
                         <div className="col-sm-9">
-                            <input type="number" className="form-control" id="codigo" value={this.state.codigo} onChange={(e) => this.alteraCodigo(e.target.value)} />
+                            <input type="number" className="form-control" id="codigo" value={this.state.codigo} onChange={(e) => this.alteraCampo(e.target.value)} />
                         </div>
                     </div>
                     <div className="form-group row">
@@ -31,7 +25,7 @@ export default class Formulario extends React.Component {
                             Descrição:
                         </label>
                         <div className="col-sm-9">
-                            <input type="text" className="form-control" id="descricao" value={this.state.descricao} onChange={(e) => this.alteraDescricao(e.target.value)} />
+                            <input type="text" className="form-control" id="descricao" value={this.state.descricao} onChange={(e) => this.alteraCampo(e.target.value)} />
                         </div>
                     </div>
                     
@@ -40,14 +34,14 @@ export default class Formulario extends React.Component {
 
                         <div className="col-sm-9">
                             <input type="number"
-                                className="form-control" id="cargaHoraria" value={this.state.cargaHoraria} onChange={(e) => this.alteraCargaHoraria(e.target.value)} />
+                                className="form-control" id="cargaHoraria" value={this.state.cargaHoraria} onChange={(e) => this.alteraCampo(e.target.value)} />
                         </div>
                     </div>
 
                     <div className="form-group row">
                         <label htmlFor="preco" className="col-sm-3 col-form-label">Preço:</label>
                         <div className="col-sm-9">
-                            <input type="number" className="form-control" id="preco" value={this.state.preco} onChange={(e) => this.alteraPreco(e.target.value)}/>
+                            <input type="number" className="form-control" id="preco" value={this.state.preco} onChange={(e) => this.alteraCampo(e.target.value)}/>
                         </div>
                     </div>
 
@@ -55,7 +49,7 @@ export default class Formulario extends React.Component {
                         <label htmlFor="categoria"
                             className="col-sm-3 col-form-label">Categoria:</label>
                         <div className="col-sm-9">
-                            <select className="form-control" id="categoria" value={this.state.categoria} onChange={(e) => this.alteraCategoria(e.target.value)}>
+                            <select className="form-control" id="categoria" value={this.state.categoria} onChange={(e) => this.alteraCampo(e.target.value)}>
                                 <option>INFORMATICA</option>
                                 <option>ENGENHARIA</option>
                                 <option>ADMINISTRACAO</option>

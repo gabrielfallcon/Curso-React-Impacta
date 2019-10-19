@@ -9,7 +9,12 @@ const URL = "http://localhost:3200/api/curso"
 export default class Cadastro extends React.Component {
 
     state = {
-        data: []
+        data: [],
+        codigo: 0,
+        descricao: 'salve',
+        cargaHoraria:'0',
+        preco: 0.0,
+        categoria: 'REDES' 
     }
 
     componentWillMount(){

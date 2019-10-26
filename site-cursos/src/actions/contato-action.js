@@ -41,6 +41,7 @@ export const alteraAssunto = e => {
 export const adicionaContato = (data, nome, email, assunto) => {
      
     axios.post(URL, {data, nome, email, assunto})
+    
     return{ 
         type: 'LIMPAR_FORM'
     }

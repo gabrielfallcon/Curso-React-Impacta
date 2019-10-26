@@ -20,7 +20,7 @@ export default (state = INITIAL_STATE, action) => {
         case 'ATUALIZA_ASSUNTO' :
             return {...state, assunto : action.info}
         case 'LIMPAR_FORM' :
-            return {...state, INITIAL_STATE : action.info}
+            return  INITIAL_STATE
 
         default: 
             return state

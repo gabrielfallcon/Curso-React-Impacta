@@ -15,7 +15,8 @@ export default class Cadastro extends React.Component {
         descricao: '',
         cargaHoraria: 0,
         preco: 0.0,
-        categoria: 'REDES'
+        categoria: 'REDES',
+        textoBotao: 'Adicionar'
     }
 
     constructor(props) {

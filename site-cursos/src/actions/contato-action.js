@@ -1,3 +1,7 @@
+import axios from 'axios';
+
+const URL = "http://localhost:3200/api/contato";
+
 export const alteraData = e => {
 
     return {
@@ -32,4 +36,12 @@ export const alteraAssunto = e => {
         info: e.target.value
     }
 
+}
+
+export const adicionaContato = (data, nome, email, assunto) => {
+     
+    axios.post(URL, {data, nome, email, assunto})
+    return{ 
+        type: 'LIMPAR_FORM'
+    }
 }

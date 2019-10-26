@@ -7,10 +7,11 @@ const moongose = restful.mongoose;
 // definindo o schema contato
 const contatoSchema = new moongose.Schema({
 
-    codigo: { type: Number, required: true },
-    nome:   { type: String, required: true },
-    email:  { type: String, required: true },
-    menssagem: { type: String, required: true }
+    
+    data :   { type: Date,   required: true },
+    nome:    { type: String, required: true },
+    email:   { type: String, required: true },
+    assunto: { type: String, required: true }
 
 });
 

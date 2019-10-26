@@ -146,6 +146,10 @@ export default class Cadastro extends React.Component {
         })
 
     }
+    limpar = function(e){
+        e.preventDefault();
+        this.setState({...this.initialState, data : this.state.data})
+    }
 
     render() {
         return (

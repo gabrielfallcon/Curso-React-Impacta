@@ -21,7 +21,7 @@ export default class Cadastro extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = this.initialState
+        
 
     }
 
@@ -30,7 +30,7 @@ export default class Cadastro extends React.Component {
     }
 
     listar() {
-        axios.get(URL).then(response => this.setState({ ...this.state, data: response.data }))
+        // axios.get(URL).then(response => this.setState({ ...this.state, data: response.data }))
     }
 
     adicionarCurso(e) {
@@ -157,17 +157,13 @@ export default class Cadastro extends React.Component {
             <div className="row border-bottom">
                 <div className="col-md-6">
                     <CursoForm alteraCampos={this.alteraCampos.bind(this)}
-                        codigo={this.state.codigo}
-                        descricao={this.state.descricao}
-                        cargaHoraria={this.state.cargaHoraria}
-                        preco={this.state.preco}
-                        categoria={this.state.categoria}
                         adicionarCurso={this.adicionarCurso.bind(this)}
-                        textoBotao={this.state._id && this.state._id !== '' ?'Atualizar' : 'Adicionar'}
+                        // textoBotao={this.state._id && this.state._id !== '' ?'Atualizar' : 'Adicionar'}
                     />
                 </div>
                 <div className="col-md-6">
-                    <CursoList batatas={this.state.data}
+                    <CursoList 
+                    // batatas={this.state.data}
                         removerCurso={this.removerCurso.bind(this)}
                         consultarCurso={this.consultarCurso.bind(this)}
 
@@ -178,3 +174,5 @@ export default class Cadastro extends React.Component {
     }
 
 }
+
+ 

@@ -1,9 +1,27 @@
 import React from 'react'
 
-export default class Lista extends React.Component {
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import { listarCurso } from '../../../actions/curso-action'
+
+const mapStateToProps = state => ({
+   lista : state.curso.lista
+
+})
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+    listarCurso
+}, dispatch)
+
+
+ class Lista extends React.Component {
+
+    componentWillMount() {
+        this.props.listarCurso()
+    }
 
     exibirLinhas = () => {
-        const cursos = this.props.batatas || [];
+        const cursos = this.props.lista || [];
         return cursos.map(curso => (
             <tr key={curso._id}>
                 <td>{curso.codigo}</td>
@@ -44,3 +62,5 @@ export default class Lista extends React.Component {
         )
     }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Lista)
